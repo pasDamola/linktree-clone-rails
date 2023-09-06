@@ -1,6 +1,6 @@
 class Users::DeviseController < ApplicationController
     class Responder < ActionController::Responder
-        def turbo_stream
+        def to_turbo_stream
             controller.render(options.merge(formats: :html))
         rescue ActionView::MissingTemplate => e
             if get?
